@@ -626,7 +626,8 @@ MonoBehaviour:
   fightLeft: 260
   fightRight: 262
   jumpKey: 256
-  speed: 1
+  speed: 3
+  movementType: 1
   orientToDirection: 0
   lookAxis: 0
 --- !u!114 &427778786

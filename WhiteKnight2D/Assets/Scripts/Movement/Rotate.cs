@@ -6,7 +6,7 @@ using System.Collections;
 public class Rotate : Physics2DObject
 {
 	[Header("Input keys")]
-	public Enums.KeyGroups typeOfControl = Enums.KeyGroups.ArrowKeys;
+	//public Enums.KeyGroups typeOfControl = Enums.KeyGroups.ArrowKeys;
 
 	[Header("Rotation")]
 	public float speed = 5f;
@@ -19,14 +19,14 @@ public class Rotate : Physics2DObject
 	{
         //Register the spin from the player input
         //Moving with the arrow keys
-        if (typeOfControl == Enums.KeyGroups.ArrowKeys)
-        {
-            spin = Input.GetAxis("Horizontal");
-        }
-        else
-        {
-            spin = Input.GetAxis("Horizontal2");
-        }
+        //if (typeOfControl == Enums.KeyGroups.ArrowKeys)
+        //{
+        //    spin = Input.GetAxis("Horizontal");
+        //}
+        //else
+        //{
+        //    spin = Input.GetAxis("Horizontal2");
+        //}
     }
 
     private void LateUpdate()
@@ -34,12 +34,12 @@ public class Rotate : Physics2DObject
 
         if (Input.GetKeyDown("o"))
         {
-            spin -= 10f;
+            spin -= 1f;
         }
 
         if (Input.GetKeyDown("p"))
         {
-            spin += 10f;
+            spin += 1f;
         }
 
     }

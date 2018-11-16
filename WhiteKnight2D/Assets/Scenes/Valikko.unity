@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b41ae45c54ffc41a4258abd19b31ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  sceneName: 
 --- !u!1 &452728385
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b41ae45c54ffc41a4258abd19b31ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  sceneName: 
 --- !u!1 &1074943248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1539,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
           m_FloatArgument: 0
-          m_StringArgument: Peli
+          m_StringArgument: Skene1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
