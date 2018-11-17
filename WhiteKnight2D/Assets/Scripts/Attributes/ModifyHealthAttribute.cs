@@ -7,13 +7,16 @@ public class ModifyHealthAttribute : MonoBehaviour
 {
 
 	public int healthChange = -1;
+   // public string otherPlayerTag;
 
 
 	// This function gets called everytime this object collides with another
 	private void OnCollisionEnter2D(Collision2D collisionData)
 	{
 		HealthSystemAttribute healthScript = collisionData.gameObject.GetComponent<HealthSystemAttribute>();
-		if(healthScript != null)
+        string tag = collisionData.gameObject.tag; 
+
+        if (healthScript != null && gameObject.tag != tag)
 		{
 			// subtract health from the player
 			healthScript.ModifyHealth(healthChange);
@@ -23,7 +26,8 @@ public class ModifyHealthAttribute : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D colliderData)
 	{
 		HealthSystemAttribute healthScript = colliderData.gameObject.GetComponent<HealthSystemAttribute>();
-		if(healthScript != null)
+        string tag = colliderData.gameObject.tag;
+        if (healthScript != null && gameObject.tag != tag)
 		{
 			// subtract health from the player
 			healthScript.ModifyHealth(healthChange);

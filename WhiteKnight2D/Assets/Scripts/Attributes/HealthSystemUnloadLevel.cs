@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-[AddComponentMenu("Playground/Attributes/Health System")]
-public class HealthSystemAttribute : MonoBehaviour
+[AddComponentMenu("Playground/Attributes/Health System UnloadLevel")]
+public class HealthSystemUnloadLevel : MonoBehaviour
 {
     public int health = 3;
 
@@ -14,13 +14,10 @@ public class HealthSystemAttribute : MonoBehaviour
     // it's -1 if the object is not a player
     private int playerNumber;
 
-    private GameObject[] SceneRoots;
-
 
 
     private void Start()
     {
-        SceneRoots = SceneManager.GetSceneByName("Skene1").GetRootGameObjects();
         // Find the UI in the scene and store a reference for later use
         ui = GameObject.FindObjectOfType<UIScript>();
 
@@ -69,33 +66,14 @@ public class HealthSystemAttribute : MonoBehaviour
         }
 
         //DEAD
-        if (health <= 0 && playerNumber == 0) //pelaaja häviää
+        if (health <= 0)
         {
-            Debug.Log("NO NYT ON RITARI VOITETTU!!! : " + playerNumber);
+            Debug.Log("NO NYT ON RITARI VOITETTU!!! : ");
             //SceneManager.UnloadScene("MiekkaTaistelu");
-            //foreach (var root in SceneRoots)
-            //{
-            //    Debug.Log(root);
-            //    root.SetActive(true);
-            //}
-            SceneManager.UnloadSceneAsync("MiekkaTaistelu");
-            SceneManager.LoadScene("Lopetus");
+            SceneManager.LoadScene("Skene1");
             Destroy(gameObject);
-        }
 
-        if (health <= 0 && playerNumber == 1) //vastustaja häviää
-        {
-            Debug.Log("Onnittelut, vastustaja voitettu!!! : " + playerNumber);
-            //SceneManager.UnloadScene("MiekkaTaistelu");
-            foreach (var root in SceneRoots)
-            {
-                Debug.Log(root);
-                root.SetActive(true);
-                if (root.tag == "Player2") Destroy(root);
-            }
-            SceneManager.UnloadSceneAsync("MiekkaTaistelu");
-            //SceneManager.LoadScene("Skene1");
-            Destroy(gameObject);
         }
     }
 }
+

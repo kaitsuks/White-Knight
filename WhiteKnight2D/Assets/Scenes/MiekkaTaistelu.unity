@@ -113,6 +113,46 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &42818907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42818909}
+  - component: {fileID: 42818908}
+  m_Layer: 0
+  m_Name: SuljeSkene1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &42818908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42818907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50795f152928a5346b3422e4c43b5e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &42818909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42818907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.87654877, y: -0.43097, z: -0.022522122}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &134388438
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +169,7 @@ GameObject:
   - component: {fileID: 134388444}
   m_Layer: 0
   m_Name: LeftArm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +202,10 @@ MonoBehaviour:
   rigidbody2D: {fileID: 0}
   keyUp: 102
   keyDown: 103
-  speed: 5
+  speed: 30
+  hit: 6
+  downForce: 2
+  down: 1
 --- !u!233 &134388441
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -267,8 +310,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17313218, y: 0.026050895}
-  m_Size: {x: 0.22426665, y: 0.5852655}
+  m_Offset: {x: 0.16207269, y: 0.07028878}
+  m_Size: {x: 0.09892577, y: 0.4967898}
   m_Direction: 0
 --- !u!1 &210365763
 GameObject:
@@ -357,11 +400,11 @@ GameObject:
   - component: {fileID: 239535576}
   - component: {fileID: 239535573}
   - component: {fileID: 239535575}
-  - component: {fileID: 239535574}
   - component: {fileID: 239535577}
+  - component: {fileID: 239535574}
   m_Layer: 0
   m_Name: RightArm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,19 +448,21 @@ Rigidbody2D:
 --- !u!114 &239535574
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114432867861327588, guid: 51194d26421cef44f920a543fe163196,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 239535571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1416944fdf5646f4381da1403413aed7, type: 3}
+  m_Script: {fileID: 11500000, guid: ffefbe2720499ef40a77c23d8150ea1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 0}
-  keyUp: 104
-  keyDown: 106
-  speed: 5
+  keyUp: 273
+  keyDown: 274
+  speed: 40
+  hit: 7
+  downForce: 5
+  down: 1
 --- !u!233 &239535575
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -624,7 +669,7 @@ GameObject:
   - component: {fileID: 427778785}
   m_Layer: 0
   m_Name: SwordFightFeetSheet
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -924,8 +969,8 @@ GameObject:
   - component: {fileID: 608384457}
   - component: {fileID: 608384460}
   m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
+  m_Name: MiekkailuCamera
+  m_TagString: CameraMiekkailu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1013,7 +1058,7 @@ GameObject:
   - component: {fileID: 710588231}
   m_Layer: 0
   m_Name: KnightPrefab1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1184,7 +1229,7 @@ GameObject:
   - component: {fileID: 1147725291}
   m_Layer: 0
   m_Name: Knight2
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1223,7 +1268,7 @@ GameObject:
   - component: {fileID: 1237716144}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1367,7 +1412,7 @@ GameObject:
   - component: {fileID: 1247090559}
   m_Layer: 0
   m_Name: SwordFightFeetSheet
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1770,15 +1815,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1336376173}
   - component: {fileID: 1336376178}
-  - component: {fileID: 1336376177}
   - component: {fileID: 1336376176}
   - component: {fileID: 1336376175}
   - component: {fileID: 1336376174}
-  - component: {fileID: 1336376180}
-  - component: {fileID: 1336376179}
+  - component: {fileID: 1336376177}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,8 +1834,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1336376172}
   m_LocalRotation: {x: -0.0015226472, y: 0.022193585, z: -0.068429746, w: 0.99740785}
-  m_LocalPosition: {x: 0.675, y: -0.433, z: -0.013}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.6955, y: -0.4765, z: -0.0139}
+  m_LocalScale: {x: 0.9271, y: 0.7986, z: 1}
   m_Children: []
   m_Father: {fileID: 239535572}
   m_RootOrder: 0
@@ -1812,7 +1855,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.675, y: -0.433}
+  m_ConnectedAnchor: {x: 0.6955001, y: -0.4765}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!50 &1336376175
@@ -1874,32 +1917,18 @@ PolygonCollider2D:
       - {x: 0.04, y: -0.07}
       - {x: 0.13, y: -0.01}
       - {x: 0.31, y: 0.07}
---- !u!61 &1336376177
-BoxCollider2D:
+--- !u!114 &1336376177
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 61078379040500102, guid: 51194d26421cef44f920a543fe163196,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1336376172}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.72, y: 0.4}
-    newSize: {x: 0.72, y: 0.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.72, y: 0.4}
-  m_EdgeRadius: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa3c260db47248a18ecb8112019040d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChange: -1
 --- !u!212 &1336376178
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1947,29 +1976,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1336376179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1336376172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fa3c260db47248a18ecb8112019040d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChange: -1
---- !u!114 &1336376180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1336376172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c4adaf25c56477b836b81ad48e3bdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1528237336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +1992,7 @@ GameObject:
   - component: {fileID: 1528237342}
   m_Layer: 0
   m_Name: RightArm
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2369,7 +2375,7 @@ Prefab:
     - target: {fileID: 224000012685850840, guid: 0f6ae8712879c4f40bf6af3fe490badd,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.39990234
+      value: 0.40039062
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f6ae8712879c4f40bf6af3fe490badd, type: 2}
@@ -2685,7 +2691,7 @@ GameObject:
   - component: {fileID: 1825943188}
   m_Layer: 0
   m_Name: LeftArm
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2719,6 +2725,9 @@ MonoBehaviour:
   keyUp: 263
   keyDown: 265
   speed: 5
+  hit: 6
+  downForce: 2
+  down: 1
 --- !u!233 &1825943184
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -3110,7 +3119,7 @@ GameObject:
   - component: {fileID: 2006836198}
   m_Layer: 0
   m_Name: Torso
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3250,7 +3259,7 @@ GameObject:
   - component: {fileID: 2025562555}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3263,8 +3272,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025562549}
   m_LocalRotation: {x: 0.00930765, y: 0.020204982, z: 0.41829768, w: 0.9080376}
-  m_LocalPosition: {x: -0.5465, y: -0.7356, z: 0.0501}
-  m_LocalScale: {x: 1.0875969, y: 0.8970109, z: 1}
+  m_LocalPosition: {x: -0.4238, y: -0.6828, z: 0.0446}
+  m_LocalScale: {x: 0.754466, y: 0.601984, z: 1}
   m_Children: []
   m_Father: {fileID: 1528237337}
   m_RootOrder: 0
@@ -3421,7 +3430,7 @@ GameObject:
   - component: {fileID: 2089479334}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
