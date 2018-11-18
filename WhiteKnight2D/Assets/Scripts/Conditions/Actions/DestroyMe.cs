@@ -6,15 +6,15 @@ using System.Collections.Generic;
 public class DestroyMe : MonoBehaviour
 {
 
-    private Vector3 spherePosition;
-    private float xzPosition, yPosition;
+    //private Vector3 spherePosition;
+    //private float xzPosition, yPosition;
 
     public void DestroyThis()
     {
   
         Debug.Log("TUHOTAAN TÄMÄ OBJEKTI!");
-        spherePosition = new Vector3(2.0f * Mathf.Sin(xzPosition), 4.0f * Mathf.Sin(yPosition), 2.0f * Mathf.Cos(xzPosition));
-        transform.position = spherePosition;
+        //spherePosition = new Vector3(2.0f * Mathf.Sin(xzPosition), 4.0f * Mathf.Sin(yPosition), 2.0f * Mathf.Cos(xzPosition));
+        //transform.position = spherePosition;
         Invoke("Finally", 0.5f);
 
     }

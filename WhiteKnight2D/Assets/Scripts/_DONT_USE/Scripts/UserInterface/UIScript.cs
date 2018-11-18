@@ -110,14 +110,14 @@ public class UIScript : MonoBehaviour
 
 
 
-	public void GameOver(int playerNumber)
+	public void GameOver(int playerNumber) // NO GAME OVER HERE!
 	{
         // only set game over UI if game is not over
 	    if (!gameOver)
 	    {
-			gameOver = true;
-	        statsPanel.SetActive(false);
-	        gameOverPanel.SetActive(true);
+			gameOver = false;
+	        statsPanel.SetActive(true);
+	        gameOverPanel.SetActive(false);
 	    }
 	}
 

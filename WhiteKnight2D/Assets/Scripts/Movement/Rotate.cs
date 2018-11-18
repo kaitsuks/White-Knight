@@ -3,15 +3,19 @@ using System.Collections;
 
 [AddComponentMenu("Playground/Movement/Rotate")]
 [RequireComponent(typeof(Rigidbody2D))]
-public class Rotate : Physics2DObject
+public class Rotate : Physics2DObject // MonoBehaviour //
 {
 	[Header("Input keys")]
 	//public Enums.KeyGroups typeOfControl = Enums.KeyGroups.ArrowKeys;
 
 	[Header("Rotation")]
-	public float speed = 5f;
-	
-	private float spin;
+	public float speed = 3f;
+    public KeyCode spinLeft = KeyCode.O;
+    public KeyCode spinRight = KeyCode.P;
+
+    public float spinFactor = 1;
+
+    private float spin = 0f;
 	
 	
 	// Update gets called every frame
@@ -32,12 +36,12 @@ public class Rotate : Physics2DObject
     private void LateUpdate()
     {
 
-        if (Input.GetKeyDown("o"))
+        if (Input.GetKeyDown(spinLeft))
         {
             spin -= 1f;
         }
 
-        if (Input.GetKeyDown("p"))
+        if (Input.GetKeyDown(spinRight))
         {
             spin += 1f;
         }
