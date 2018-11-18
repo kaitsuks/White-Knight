@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 70971659866604852}
   - component: {fileID: 60796424838709340}
   - component: {fileID: 114391488250902370}
-  - component: {fileID: 114535964834274166}
+  - component: {fileID: 114219421229660556}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Bullet
@@ -135,6 +135,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.12, y: 0.84}
   m_Direction: 0
+--- !u!114 &114219421229660556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277298928624996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b937f70f58d2e8468b8ecdd443e3c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChange: -1
 --- !u!114 &114391488250902370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,18 +160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: 1
   deathEffect: {fileID: 0}
---- !u!114 &114535964834274166
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1277298928624996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fa3c260db47248a18ecb8112019040d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChange: -1
 --- !u!114 &114887860110797898
 MonoBehaviour:
   m_ObjectHideFlags: 1

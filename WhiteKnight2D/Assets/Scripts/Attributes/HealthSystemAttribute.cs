@@ -85,20 +85,25 @@ public class HealthSystemAttribute : MonoBehaviour
 
         if (health <= 0 && playerNumber == 1) //vastustaja häviää
         {
-            Debug.Log("Onnittelut, vastustaja voitettu!!! : " + playerNumber);
-            //SceneManager.UnloadScene("MiekkaTaistelu");
-            foreach (var root in SceneRoots)
-            {
-                Debug.Log(root);
-                if (root != null)
-                {
-                    root.SetActive(true);
-                    if (root.tag == "Player2") { Destroy(root); }
-                }
-            }
-            SceneManager.UnloadSceneAsync("MiekkaTaistelu");
-            //SceneManager.LoadScene("Skene1");
-            Destroy(gameObject);
+            EnemyKilled();
         }
+    }
+
+    public void EnemyKilled()
+    {
+        Debug.Log("Onnittelut, vastustaja voitettu!!! : " + playerNumber);
+        //SceneManager.UnloadScene("MiekkaTaistelu");
+        foreach (var root in SceneRoots)
+        {
+            Debug.Log(root);
+            if (root != null)
+            {
+                root.SetActive(true);
+                //if (root.tag == "Player2") { Destroy(root); }
+            }
+        }
+        SceneManager.UnloadSceneAsync("MiekkaTaistelu");
+        //SceneManager.LoadScene("Skene1");
+        Destroy(gameObject);
     }
 }
