@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: WeaponsSheet_0
     21300002: WeaponsSheet_1
+    21300004: WeaponsSheet_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -133,7 +134,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ff1aa65e3a425b4b8a146b6a552dd1d
+      spriteID: 4b796479e39e3b442bee4a6948cb8bba
       vertices: []
       indices: 
       edges: []
@@ -142,10 +143,10 @@ TextureImporter:
       name: WeaponsSheet_1
       rect:
         serializedVersion: 2
-        x: 249
+        x: 248
         y: 494
-        width: 12
-        height: 84
+        width: 14
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,7 +154,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a0d79e3720c2bd48ad15de003c74b66
+      spriteID: a0988ee8df8a7d449b31cd565910f1ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponsSheet_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 433
+        width: 333
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b53e634d7d487c49b68bb76eeb3ce44
       vertices: []
       indices: 
       edges: []
