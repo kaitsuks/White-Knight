@@ -19,6 +19,8 @@ TagManager:
   - CameraSkene1
   - CameraMiekkailu
   - CameraVara
+  - Sillanosa
+  - Sillanpaikka
   layers:
   - Default
   - TransparentFX

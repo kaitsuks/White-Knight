@@ -6,14 +6,14 @@ using System.Collections;
 public class InOrderCollectableAttribute : MonoBehaviour
 {
 	public int orderNumber = 0;
-    private Collection collection;
+    private KksCollection collection;
 
 	// Start is called at the beginning
 	private void Start()
 	{
 		// Find the Collection in the scene and store a reference for later use
-        collection = GameObject.FindObjectOfType<Collection>();
-        Debug.Log("Collection hnr = " + collection.highNumber);        
+        collection = GameObject.FindObjectOfType<KksCollection>();
+        Debug.Log("Collection HAETTU hnr = " + collection.highNumber);        
     }
 
 	// This function gets called everytime this object collides with another
@@ -32,8 +32,9 @@ public class InOrderCollectableAttribute : MonoBehaviour
                 {
                     // then destroy this object
                     Debug.Log("Destroying orderNumber = " + orderNumber);
+                    collection.AddNumber(orderNumber);
                     Destroy(gameObject);
-                    collection.AddNumber();
+                    
                 }
             }            
 		}
